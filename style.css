@@ -493,7 +493,10 @@ a:hover {
 /* >> DESKTOP-LAPTOP-VIEW */
 /*------------------------*/
 
-.grid-box-body {
+
+/* ----- 3 COLUMNS ------ */
+
+.grid-box-body3 {
   display: grid;
   grid-template-columns:repeat(3, 1fr); 
   grid-template-rows: repeat(3, 1fr);
@@ -504,25 +507,43 @@ a:hover {
   margin: 0 auto;
  }
 
-.grid-box-head {
+ .grid-box-head3 {
 	display: grid;
-	background-color: #DB584C;
-	grid-column: span 3;
-	justify-content: center;
-	align-content: center;
+	grid-column: span 3;	
 	border-radius: 16px;
 	width: 100%;
 	margin: 0 auto;
+	justify-content: center;
+	align-content: center;
+	padding: 16px;
 }
 
-.grid-box-head h3 {
+.grid-box-head3 h3 {
 	font-size: 30px;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	padding: 8px;
+}
 
-}	
+
+.grid-items {
+	display: grid;
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 16px;
+	padding: 16px;
+}
 
 
-.grid-box-foot {
-	background-color: #DB584C;
+.grid-items h3 {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	padding: 10px;
+}
+
+.grid-box-foot3 {
 	grid-column: span 3;
 	justify-content: center;
 	align-content: center;
@@ -532,55 +553,46 @@ a:hover {
 	padding: 16px;
 }
 
-.grid-box-foot h3 {
-	display: grid;
-	justify-content: center;
-	align-content: center;
-	padding: 10px;
-	
-}
-
-.grid-items {
-	display: grid;
-	background-color:#2BC6D4;
-	width: 100%;
-	margin: 0 auto;
-	border-radius: 16px;
-	padding: 16px;
-}
-
-.grid-items h3 {
+.grid-box-foot3 h3 {
 	display: grid;
 	justify-content: center;
 	align-content: center;
 	padding: 10px;
 }
+
+
+
 
 /*------------------------*/
 /* >> MOVILE-TABLET-VIEW  */
 /*------------------------*/
 
+
 /*___________________________*/
 @media (max-width: 1199px) {
-.grid-box-body {
-  display: grid;
-  grid-template-columns:repeat(3, 1fr); 
-  grid-template-rows: 1fr 3fr 1fr;
-  gap: 10px;
-  padding: 16px;
-  background-color: #867982;
-  width: 95%;
-  margin: 0 auto;
- }
 
-.grid-items {
-	display: grid;
-	background-color:#2BC6D4;
-	width: 100%;
-	margin: 0 auto;
-	border-radius: 16px;
-	padding: 16px;
-}
+	.grid-box-body3 {
+	  display: grid;
+	  grid-template-columns:repeat(3, 1fr); 
+	    grid-template-rows: 1fr 2fr 2fr 1fr;
+	  gap: 10px;
+	  padding: 16px;
+	  width: 95%;
+	  margin: 0 auto;
+	 }
+
+	.grid-items:nth-child(2) {
+		 grid-column: span 2;		  
+	}
+	
+	.grid-items:nth-child(3) {
+		 grid-column: span 1;		  
+	}
+
+	.grid-items:nth-child(4) {
+		 grid-column: span 3;
+		  
+	}
 
 }
 
@@ -588,10 +600,151 @@ a:hover {
 /*___________________________*/
 @media (max-width: 768px) {
 
-	.grid-box-body {
+	.grid-box-body3 {
 	  display: grid;
 	  grid-template-columns:repeat(3, 1fr); 
-	  grid-template-rows: 1fr 3fr 3fr 3fr 3fr; 
+	    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	  gap: 10px;
+	  padding: 16px;
+	  width: 100%;
+
+	 }
+
+
+	.grid-items:nth-child(2), .grid-items:nth-child(3), .grid-items:nth-child(4) {
+		 grid-column: span 3;
+		  
+	}
+
+
+
+}
+
+
+/*___________________________*/
+@media (max-width: 600px) {
+	
+	.grid-box-body3 {
+	  display: grid;
+	  grid-template-columns:repeat(3, 1fr); 
+	    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	  gap: 10px;
+	  padding: 10px;
+	  width: 100%;
+
+	 }
+
+
+}
+
+
+
+/* ----- 2 COLUMNS ------ */
+
+ .grid-box-body2 {
+  display: grid;
+  grid-template-columns:repeat(2, 1fr); 
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  padding: 16px;
+  background-color: #867982;
+  width: 80%;
+  margin: 0 auto;
+ }
+
+ .grid-box-head2 {
+	display: grid;
+	grid-column: span 2;
+	justify-content: center;
+	align-content: center;
+	border-radius: 16px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.grid-box-head2 h3 {
+	font-size: 30px;
+
+}	
+
+
+.grid-item {
+	display: grid;
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 16px;
+	padding: 16px;
+}
+
+.grid-item h3 {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	padding: 10px;
+}
+
+.grid-box-foot2 {
+	grid-column: span 2;
+	justify-content: center;
+	align-content: center;
+	border-radius: 16px;
+	width:100%;
+	margin: 0 auto;
+	padding: 16px;
+}
+
+.grid-box-foot2 h3 {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	padding: 10px;
+	
+}
+
+.grid-item {
+	display: grid;
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 16px;
+	padding: 16px;
+}
+
+.grid-item h3 {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	padding: 10px;
+}
+
+
+/*------------------------*/
+/* >> MOVILE-TABLET-VIEW  */
+/*------------------------*/
+
+/*___________________________*/
+@media (max-width: 1199px) {
+.grid-box-body2 {
+  display: grid;
+  grid-template-columns:repeat(2, 1fr); 
+  grid-template-rows: 1fr 3fr 2fr;
+  gap: 10px;
+  padding: 16px;
+  width: 95%;
+  margin: 0 auto;
+ }
+
+
+
+}
+
+
+/*___________________________*/
+@media (max-width: 768px) {
+
+	.grid-box-body2 {
+	  display: grid;
+	  grid-template-columns:repeat(2, 1fr); 
+	  grid-template-rows: 1fr 3fr 3fr 3fr; 
 	  gap: 10px;
 	  padding: 16px;
 	  width: 100%;
@@ -602,18 +755,25 @@ a:hover {
 		 grid-column: span 3;
 	}
 
+	.grid-item {
+		 grid-column: span 2;
+	}
+
 }
 
 
 /*___________________________*/
 @media (max-width: 600px) {
 
-	.grid-box-body {
+	.grid-box-body2 {
 	  gap: 10px;
-	  padding: 16px;
+	  padding: 10px;
 	 }
 
 }
+
+
+
 
 /* ======================================================== */
 /* >> FONTS << */
@@ -626,7 +786,6 @@ a:hover {
 .banner h1 {
 	font-size: 90px;
 	text-shadow: 2px 2px 5px black;
-	color: #fff;
 }
 
 
@@ -690,8 +849,42 @@ a:hover {
 	padding: 16px;
 
 }
+ 
+.b-col1 {
+	background-color: orange;
+}
+
+.b-col2 {
+	background-color: blue;
+}
+
+.b-col3 {
+	background-color: yellow;
+}
+
+.b-col4 {
+	background-color: lightblue;
+}
+
+.b-col5 {
+	background-color: purple;
+}
 
 
+.b-col {
+	  background-color: #eee;
+}
+
+
+
+.c1 {color: orange;}
+.c2 {color: blue;}
+.c3 {color: yellow;}
+.c4 {color: lightblue;}
+.c5 {color: purple;}
+.c6 {color:#eee;}
+
+/*
 .b-img1 {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img.jpg");
     background-repeat: no-repeat;
@@ -699,7 +892,6 @@ a:hover {
     background-size: cover;
     background-attachment: scroll;
 }
-
 
 
 
