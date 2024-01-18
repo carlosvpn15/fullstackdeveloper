@@ -199,7 +199,7 @@ a:hover {
 
 
 /* ======================================================== */
-/* >> NAVBAR  << */
+/* >> CONTAINER  << */
 /* ======================================================== */
 
 
@@ -221,25 +221,32 @@ a:hover {
 	margin: 0 auto;
 	background-color: #867982;
 
+
 }
 
 
 .grid-box-head {
 	display: flex;
 	width: 100%;
-	height: 200px;
-	background-color: green;
+	height: auto;
 	justify-content: center;
-	align-content: center;
+	align-content: space-between;
 	align-items: center;
 	flex-direction: column;
 	border-radius: 10px;
 	margin: 16px;
+	padding: 16px;
+	line-height: 1.5;
+	
 }
 
 .grid-box-head h3{
 	font-size: 30px;
 
+}
+
+.title {
+	font-weight: 700;
 }
 
 .grid-items {
@@ -274,9 +281,9 @@ a:hover {
 .grid-box-foot {
 	display: flex;
 	height: 200px;
-	background-color: green;
+	width: 100%;
 	justify-content: center;
-	align-content: center;
+	align-content: space-around;
 	align-items: center;
 	padding: 16px;
 	flex-direction: column;
@@ -312,7 +319,7 @@ a:hover {
 	.grid-box-head {
 		display: flex;
 		width: 100%;
-		height: 150px;
+		height: auto;
 		justify-content: center;
 		align-content: center;
 		align-items: center;
@@ -354,7 +361,7 @@ a:hover {
 
 	.grid-box-foot {
 		display: flex;
-		height: 200px;
+		height: auto;
 		justify-content: center;
 		align-content: center;
 		align-items: center;
@@ -383,7 +390,6 @@ a:hover {
 	.grid-box-head {
 		display: flex;
 		width: 100%;
-		height: 100px;
 		background-color: green;
 		justify-content: center;
 		align-content: center;
@@ -421,7 +427,6 @@ a:hover {
 
 	.grid-box-foot {
 		display: flex;
-		height: 200px;
 		background-color: green;
 		justify-content: center;
 		align-content: center;
